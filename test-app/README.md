@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project is a test app which displays the basic react features of JSX, Component, Routing, hooks, Conditional rendering etc.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
