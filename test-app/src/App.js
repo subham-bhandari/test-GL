@@ -1,27 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button';
-import { MyForm } from './form';
-import {useState} from 'react';
-const ele = <h1>Hello World using JSX</h1> // use of jsx
+import { lazy } from "react";
+import {Routes, Route} from "react-router-dom";
+import Stateupdate from "./component/Stateupdate";
+import MyForm from "./component/Form";
+import Contact from "./component/Contact";
+import Home from "./component/Home";
+import Navbar from "./component/Navbar";
+// const Contact = lazy(() => import("./component/Contact"));
+
 function App() {
-  const [isShown, setIsShown] = useState(false); // use of state
-  const handleClick = event => {
-
-    setIsShown(current => !current);
-
-  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-           {ele}  
-           <Button onClick={handleClick} variant="contained">Click here for form</Button>  
-           {isShown && ( //Conditional rendering
-        <MyForm header = "Prop Header here"/>
-      )}   
-      </header>
-    </div>
+    <>
+    <Navbar />
+
+    <Routes >
+      <Route path="/" element={ <Home /> } />
+      <Route path="/form" element={ <MyForm header= "This is Prop header"/> } />
+      <Route path="/stateUpdate" element={ <Stateupdate /> } />
+      <Route path="/contact" element={ <Contact /> } />
+    </Routes>
+    </>
   );
 }
 

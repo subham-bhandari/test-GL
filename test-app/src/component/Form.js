@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import  './formstyle.css';
-export const  MyForm = ({
+import  './formStyle.css';
+const  MyForm = ({
     header,
 }) => {
     return (
         <div class="form-style-10">   
-        <h1>{header} Sign Up Now!<span>Sign up and tell us what you think of the site!</span></h1>
+        <h1>{header}<span>Sign up and tell us what you think of the site!</span></h1>
         <form>
             <div class="section"><span>1</span>First Name & Address</div>
             <div class="inner-wrap">
@@ -38,3 +38,5 @@ export const  MyForm = ({
   MyForm.propTypes = {
     header: PropTypes.string,
   };
+
+  export default MyForm;
